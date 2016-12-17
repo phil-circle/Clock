@@ -1,0 +1,77 @@
+body {
+  background-color: #32304c;
+}
+
+#container {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-left-radius:50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    background: #ccccff;
+    box-shadow: 3px 3px #0073e6;
+    position: relative;
+}
+
+#circle {
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-left-radius:50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    background: #b3ffff;
+    box-shadow: 3px 3px #009999;
+    position: absolute;
+    left: 75px;
+    top: 75px;
+
+  /** Sets up the animation duration, timing-function (or easing)
+     * and iteration-count. Ensure you use the appropriate vendor-specific
+     * prefixes as well as the official syntax for now. Remember, tools like
+     * CSS Please are your friends!
+     */
+    animation: myOrbit 60s linear infinite;
+}
+
+/**#crater {
+  width: 40px;
+  height: 40px;
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-left-radius:50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  background: #ccccff;
+  box-shadow: 4px 4px #b3b3ff;
+  position: relative;
+  left: 45px;
+  top: 120px;
+} */
+/*
+ * Set up the keyframes to actually describe the begining and end states of
+ * the animation.  The browser will interpolate all the frames between these
+ * points.  Again, remember your vendor-specific prefixes for now!
+ */
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateY(-75px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateY(-75px) rotate(-360deg); }
+}
+
+#clock {
+  margin: 10px auto 10px auto;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 1em;
+  text-align: center;
+  text-decoration: underline;
+  color: #ccccff;
+  text-shadow: 1.5px 1px #0073e6;
+  letter-spacing: 0.2em;
+}
